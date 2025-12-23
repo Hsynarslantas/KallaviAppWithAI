@@ -1,0 +1,89 @@
+﻿@model List<GroupReservationDto>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Grup Rezervasyonları</h4>
+                <div class="card-header-form">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Aranacak Rezervasyon">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text-center">
+                                <div class="custom-checkbox custom-checkbox-table custom-control">
+                                    <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
+                                    class="custom-control-input" id="checkbox-all">
+                                    <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                </div>
+                            </th>
+                            <th>Grup Başlığı</th>
+                            <th>Yetkili Kişi</th>
+                            <th>Rezervasyon Durumu</th>
+                            <th>Kişi Sayısı</th>
+                            <th>Son İşlem Tarihi</th>
+                            <th>Rezervasyon Tarihi</th>
+                            <th>Öncelik</th>
+                            <th>Detaylar</th> 
+                        </tr>
+                        @foreach(var item in Model)
+                        {
+
+
+                            <tr>
+                                <td class="p-0 text-center">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
+                                        id="checkbox-1">
+                                        <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                                    </div>
+                                </td>
+                                <td>@item.GroupTitle</td>
+                                <td class="text-truncate">
+                                    @item.CustomerName
+                                </td>
+                                <td class="align-middle">
+                                    @if (item.ReservationStatus == "Onaylandı")
+                                    {
+                                        <span class="btn btn-success">Onaylandı</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="btn btn-warning">Beklemede</span>
+                                    }
+                                </td>
+                                <td>@item.PersonCount</td>
+                                <td>@item.LastProcessDate.ToShortDateString()</td>
+                                <td>@item.ReservationDate.ToShortDateString()</td>
+                                <td>
+                                    @if (item.Priority == "Yüksek")
+                                    {
+                                        <span class="btn btn-danger">Yüksek</span>
+                                    }
+                                    else if (item.Priority=="Orta")
+                                    {
+                                        <span class="btn btn-warning">Orta</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="btn btn-success">Düşük</span>
+                                    }
+                                </td>
+                            <td><a href="#" class="btn btn-outline-primary">Detaylar</a></td>
+                        </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

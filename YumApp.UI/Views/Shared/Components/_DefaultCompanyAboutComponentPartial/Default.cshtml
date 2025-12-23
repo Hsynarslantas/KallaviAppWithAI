@@ -1,0 +1,43 @@
+﻿@model List<ResultServiceDto>
+<section id="why-us" class="why-us section light-background">
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                    <h3>Her Lokmada Bir Hatıra, Her Sofrada Bir Hikâye</h3>
+                    <p>
+                        Bizim mutfağımızda yemek, yalnızca karın doyurmak için pişmez.
+                        Asırlardır süregelen Türk sofra geleneği; sabırla yoğrulan tarifler,
+                        ustalıkla harmanlanan tatlar ve gönülden sunulan lezzetlerle yaşatılır.
+                        Her tabak, geçmişten bugüne uzanan bir emanet;
+                        her sofra, paylaşmanın ve bereketin adıdır.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="more-btn"><span>Daha Fazlası</span> <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+                    @foreach(var item in Model)
+                    {
+                        <div class="col-xl-4">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="@item.IconUrl"></i>
+                                <h4>@item.Title</h4>
+                                <p>@item.Description</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

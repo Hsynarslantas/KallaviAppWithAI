@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_DefaultHeaderComponentPartial")
+
+<body class="index-page">
+
+    @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        @await Component.InvokeAsync("_DefaultFeatureComponentPartial")
+        <!-- About Section -->
+        @await Component.InvokeAsync("_DefaultAboutComponentPartial")
+        <!-- /About Section -->
+        <!-- Why Us Section -->
+        @await Component.InvokeAsync("_DefaultCompanyAboutComponentPartial")
+       <!-- /Why Us Section -->
+        <!-- Stats Section -->
+        @await Component.InvokeAsync("_DefaultStatisticComponentPartial")
+        <!-- /Stats Section -->
+        <!-- Menu Section -->
+        @await Component.InvokeAsync("_DefaultMenuComponentPartial")
+       <!-- /Menu Section -->
+        <!-- Testimonials Section -->
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+        <!-- /Testimonials Section -->
+        <!-- Events Section -->
+        @await Component.InvokeAsync("_DefaultEventComponentPartial")
+       <!-- /Events Section -->
+        <!-- Chefs Section -->
+        @await Component.InvokeAsync("_DefaultChefComponentPartial")
+        <!-- /Chefs Section -->
+        <!-- Book A Table Section -->
+        @await Component.InvokeAsync("_DefaultReservationComponentPartial")
+        <!-- /Book A Table Section -->
+        <!-- Gallery Section -->
+        @await Component.InvokeAsync("_DefaultImageComponentPartial")
+        <!-- /Gallery Section -->
+        <!-- Contact Section -->
+        @await Component.InvokeAsync("_DefaultContactComponentPartial")
+        <!-- /Contact Section -->
+
+    </main>
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+   
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
+
+</body>
+
+</html>

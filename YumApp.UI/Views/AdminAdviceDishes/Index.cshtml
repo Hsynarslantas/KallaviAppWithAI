@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>🧺 Malzemeleri Yaz</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="post" action="/AdminAdviceDishes/Index">
+                            <div class="form-group">
+                                <label>Elindeki malzemeler</label>
+                                <textarea name="ingredients"
+                                          class="form-control"
+                                          rows="8"
+                                          placeholder="Örnek: havuç, kuzu eti, hardal, bal"
+                                          required>@(ViewBag.Ingredients ?? "")</textarea>
+                                <small class="text-muted">
+                                    Malzemeleri virgülle ayırabilirsin. Tarif robotu sadece yazdıklarına göre en mantıklı tarifi çıkarır.
+                                </small>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning btn-block">
+                                🛎️ Tarif Üret
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>📜 Şefin Tarifi</h4>
+                        <div class="card-header-action">
+                            <div class="badge badge-pill badge-danger">🧠 AI Destekli</div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="p-4 rounded" style="background:#fbf3dc; border:1px solid #e6d3a3;">
+                            <div class="text-center mb-3">
+                                <div class="font-weight-bold" style="font-size:18px; letter-spacing:0.5px;">
+                                    Elindekilerle Çıkacak En Mantıklı Tarif
+                                </div>
+                                <div class="text-muted" style="font-size:13px;">
+                                    (Tarif Robotu – Şef Usulü)
+                                </div>
+                            </div>
+
+                            <div style="white-space: pre-line; line-height:1.9; font-weight:600;">
+                                @(ViewBag.RecipeResult ?? "Malzemeleri gir ve “Tarif Üret”e bas. Tarif burada görünecek.")
+                            </div>
+
+                            <div class="mt-4 text-center font-italic" style="color:#7a6a3a; font-size:14px;">
+                                “Az malzemeyle büyük lezzet olur; mühim olan usuldür.”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

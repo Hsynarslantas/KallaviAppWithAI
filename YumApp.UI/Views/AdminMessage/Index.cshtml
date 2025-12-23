@@ -1,0 +1,153 @@
+﻿@model List<ResultMessageDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+
+<section class="section">
+	<div class="section-body">
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4>Mesaj Listesi</h4>
+					</div>
+					<div class="card-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">İsim Soyisim</th>
+									<th scope="col">Mail</th>
+									<th scope="col">Konu</th>
+									<th scope="col">Mesaj Gönderim Tarihi</th>
+									<th scope="col">Mesaj İçeriği</th>
+									<th scope="col">Mesaj Durumu</th>
+									<th scope="col">Mesaj İnceleme Durumu </th>
+									<th scope="col">Cevapla</th>
+									<th scope="col">Sil</th>
+								</tr>
+							</thead>
+							@foreach (var item in Model)
+							{
+								count++;
+								<tbody>
+									<tr>
+										<td>@count</td>
+										<td>@item.NameSurname</td>
+										<td>@item.Email</td>
+										<td>@item.Subject</td>
+										<td>@item.SendDate.ToShortDateString()</td>
+										<td>
+											<button type="button"
+													class="btn btn-outline-primary open-message"
+													data-id="@item.MessageId">
+												Mesajı Aç
+											</button>
+										</td>
+										<td>
+											@if (item.IsRead == true)
+											{
+												<span class="btn btn-success">Okundu</span>
+											}
+											else
+											{
+												<span class="btn btn-warning">Okunmadı</span>
+											}
+										</td>
+										<td>
+											@if (item.Status == "Mesaj Alındı")
+											{
+												<span class="badge badge-info">Mesaj Alındı</span>
+											}
+											else if (item.Status == "Onay Bekleniyor")
+											{
+												<span class="badge badge-warning">Onay Bekleniyor</span>
+											}
+											else if (item.Status == "🤬 Toksik Mesaj")
+											{
+												<span class="badge badge-danger">🤬 Toksik Mesaj</span>
+											}
+											else
+											{
+												<span class="badge badge-secondary">@item.Status</span> 
+											}
+										</td>
+
+										<td><a href="/AdminMessage/AnswerWithAI/@item.MessageId" class="btn btn-primary">Cevapla</a></td>
+										<td><a href="/AdminMessage/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
+									</tr>
+								</tbody>
+							}
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="modal fade" id="messageModal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Mesaj İçeriği</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<div class="modal-body">
+				<p id="messageContent">Yükleniyor...</p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+					Mesajı Kapat
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function () {
+
+		$(".open-message").click(function () {
+
+			var id = $(this).data("id");
+
+			$("#messageContent").html("Yükleniyor...");
+
+			$.ajax({
+				url: "/AdminMessage/MessageDetail?id=" + id,
+				type: "GET",
+				success: function (data) {
+
+					$("#messageContent").html(`
+						<strong>Gönderen:</strong> ${data.nameSurname}<br>
+						<strong>Email:</strong> ${data.email}<br>
+						<strong>Konu:</strong> ${data.subject}<br>
+						<strong>Tarih:</strong> ${data.sendDate}<br><br>
+
+						<strong>Mesaj İçeriği:</strong><br>
+						<div style="white-space:pre-wrap;">${data.messageDetails}</div>
+					`);
+
+					var modal = new bootstrap.Modal(document.getElementById('messageModal'));
+					modal.show();
+				},
+				error: function () {
+					$("#messageContent").html("Mesaj bulunamadı.");
+
+					var modal = new bootstrap.Modal(document.getElementById('messageModal'));
+					modal.show();
+				}
+			});
+
+		});
+
+	});
+</script>
+

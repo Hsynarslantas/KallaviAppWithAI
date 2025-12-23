@@ -1,0 +1,27 @@
+﻿@model List<ResultMessageDto>
+<div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+    <div class="dropdown-header">
+        Messages
+        <div class="float-right">
+            <a href="#">Okunmuş Olarak İşaretle</a>
+        </div>
+    </div>
+    <div class="dropdown-list-content dropdown-list-message">
+        @foreach(var item in Model)
+        {
+        <a href="#" class="dropdown-item">
+            <span class="dropdown-item-avatar text-white">
+            </span> <span class="dropdown-item-desc">
+                <span class="message-user">
+                   @item.NameSurname
+                </span>
+                <span class="time messege-text">@item.Subject</span>
+                <span class="time">@item.SendDate.ToShortDateString()</span>
+            </span>
+        </a> 
+        }
+    </div>
+    <div class="dropdown-footer text-center">
+        <a href="#">Hepsini Bak <i class="fas fa-chevron-right"></i></a>
+    </div>
+</div>

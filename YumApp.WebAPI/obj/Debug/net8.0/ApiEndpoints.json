@@ -1,0 +1,1238 @@
+[
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.AboutsController",
+    "Method": "AboutList",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.AboutsController",
+    "Method": "CreateAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createAboutDto",
+        "Type": "YumApp.WebAPI.Dtos.AboutDtos.CreateAboutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.AboutsController",
+    "Method": "CreateAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.AboutsController",
+    "Method": "UpdateAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateAboutDto",
+        "Type": "YumApp.WebAPI.Dtos.AboutDtos.UpdateAboutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.AboutsController",
+    "Method": "GetAbout",
+    "RelativePath": "api/Abouts/GetAbout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.CategoriesController",
+    "Method": "CategoryList",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.CategoriesController",
+    "Method": "CreateCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCategoryDto",
+        "Type": "YumApp.WebAPI.Dtos.CategoryDtos.CreateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.CategoriesController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCategoryDto",
+        "Type": "YumApp.WebAPI.Dtos.CategoryDtos.UpdateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.CategoriesController",
+    "Method": "GetCategory",
+    "RelativePath": "api/Categories/GetCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "ChefList",
+    "RelativePath": "api/Chefs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "CreateChef",
+    "RelativePath": "api/Chefs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chef",
+        "Type": "YumApp.WebAPI.Entities.Chef",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "DeleteChef",
+    "RelativePath": "api/Chefs",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "UpdateChef",
+    "RelativePath": "api/Chefs",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chef",
+        "Type": "YumApp.WebAPI.Entities.Chef",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "GetChef",
+    "RelativePath": "api/Chefs/GetChef",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ChefsController",
+    "Method": "GetChefCount",
+    "RelativePath": "api/Chefs/GetChefCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ContactsController",
+    "Method": "ContactList",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ContactsController",
+    "Method": "CreateContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createContactDto",
+        "Type": "YumApp.WebAPI.Dtos.ContactDtos.CreateContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ContactsController",
+    "Method": "DeleteContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ContactsController",
+    "Method": "UpdateContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateContactDto",
+        "Type": "YumApp.WebAPI.Dtos.ContactDtos.UpdateContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ContactsController",
+    "Method": "GetContact",
+    "RelativePath": "api/Contacts/GetContact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "EmployeeList",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEmployeeDto",
+        "Type": "YumApp.WebAPI.Dtos.EmployeeDtos.CreateEmployeeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "DeleteEmployee",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "UpdateEmployee",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateEmployeeDto",
+        "Type": "YumApp.WebAPI.Dtos.EmployeeDtos.UpdateEmployeeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "GetEmployee",
+    "RelativePath": "api/Employees/GetEmployee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EmployeesController",
+    "Method": "GetEmployeeCount",
+    "RelativePath": "api/Employees/GetEmployeeCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "EventList",
+    "RelativePath": "api/Events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "CreateEvent",
+    "RelativePath": "api/Events",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventDto",
+        "Type": "YumApp.WebAPI.Dtos.EventDtos.CreateEventDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "CreateEvent",
+    "RelativePath": "api/Events",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "UpdateEvent",
+    "RelativePath": "api/Events",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateEventDto",
+        "Type": "YumApp.WebAPI.Dtos.EventDtos.UpdateEventDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "GetActiveEventCount",
+    "RelativePath": "api/Events/GetActiveEventCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.EventsController",
+    "Method": "GetEvent",
+    "RelativePath": "api/Events/GetEvent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.FeaturesController",
+    "Method": "FeatureList",
+    "RelativePath": "api/Features",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.FeaturesController",
+    "Method": "CreateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createFeatureDto",
+        "Type": "YumApp.WebAPI.Dtos.FeatureDtos.CreateFeatureDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.FeaturesController",
+    "Method": "DeleteFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.FeaturesController",
+    "Method": "UpdateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateFeatureDto",
+        "Type": "YumApp.WebAPI.Dtos.FeatureDtos.UpdateFeatureDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.FeaturesController",
+    "Method": "GetFeature",
+    "RelativePath": "api/Features/GetFeature",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.GroupReservationsController",
+    "Method": "GroupReservationList",
+    "RelativePath": "api/GroupReservations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.GroupReservationsController",
+    "Method": "CreateGroupReservation",
+    "RelativePath": "api/GroupReservations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createGroupReservationDto",
+        "Type": "YumApp.WebAPI.Dtos.GroupDtos.CreateGroupReservationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.GroupReservationsController",
+    "Method": "DeleteGroupReservation",
+    "RelativePath": "api/GroupReservations",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.GroupReservationsController",
+    "Method": "UpdateGroupReservation",
+    "RelativePath": "api/GroupReservations",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateGroupReservationDto",
+        "Type": "YumApp.WebAPI.Dtos.GroupDtos.UpdateGroupReservationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.GroupReservationsController",
+    "Method": "GetGroupReservation",
+    "RelativePath": "api/GroupReservations/GetGroupReservation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ImageController",
+    "Method": "ImageList",
+    "RelativePath": "api/Image",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ImageController",
+    "Method": "CreateImage",
+    "RelativePath": "api/Image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createImageDto",
+        "Type": "YumApp.WebAPI.Dtos.ImageDtos.CreateImageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ImageController",
+    "Method": "CreateImage",
+    "RelativePath": "api/Image",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ImageController",
+    "Method": "UpdateImage",
+    "RelativePath": "api/Image",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateImageDto",
+        "Type": "YumApp.WebAPI.Dtos.ImageDtos.UpdateImageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ImageController",
+    "Method": "GetImage",
+    "RelativePath": "api/Image/GetImage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.MessageController",
+    "Method": "MessageList",
+    "RelativePath": "api/Message",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.MessageController",
+    "Method": "CreateMessage",
+    "RelativePath": "api/Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createMessageDto",
+        "Type": "YumApp.WebAPI.Dtos.MessageDtos.CreateMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.MessageController",
+    "Method": "CreateMessage",
+    "RelativePath": "api/Message",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.MessageController",
+    "Method": "UpdateMessage",
+    "RelativePath": "api/Message",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateMessageDto",
+        "Type": "YumApp.WebAPI.Dtos.MessageDtos.UpdateMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.MessageController",
+    "Method": "GetMessage",
+    "RelativePath": "api/Message/GetMessage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.NotificationsController",
+    "Method": "NotificationList",
+    "RelativePath": "api/Notifications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.NotificationsController",
+    "Method": "CreateNotification",
+    "RelativePath": "api/Notifications",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createNotificationDto",
+        "Type": "YumApp.WebAPI.Dtos.NotificationDtos.CreateNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.NotificationsController",
+    "Method": "CreateNotification",
+    "RelativePath": "api/Notifications",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.NotificationsController",
+    "Method": "UpdateNotification",
+    "RelativePath": "api/Notifications",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateNotificationDto",
+        "Type": "YumApp.WebAPI.Dtos.NotificationDtos.UpdateNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.NotificationsController",
+    "Method": "GetNotification",
+    "RelativePath": "api/Notifications/GetNotification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "ProductList",
+    "RelativePath": "api/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "YumApp.WebAPI.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Products",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Products",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "YumApp.WebAPI.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "CreateProductWithCategory",
+    "RelativePath": "api/Products/CreateProductWithCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createProductDto",
+        "Type": "YumApp.WebAPI.Dtos.ProductDtos.CreateProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Products/GetProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "GetProductCount",
+    "RelativePath": "api/Products/GetProductCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "GetProductRandom",
+    "RelativePath": "api/Products/GetProductRandom",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ProductsController",
+    "Method": "ProductListWithCategory",
+    "RelativePath": "api/Products/ProductListWithCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "ReservationList",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createReservationDto",
+        "Type": "YumApp.WebAPI.Dtos.ReservationDtos.CreateReservationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "UpdateReservation",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateReservationDto",
+        "Type": "YumApp.WebAPI.Dtos.ReservationDtos.UpdateReservationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "GetReservation",
+    "RelativePath": "api/Reservations/GetReservation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "GetReservationByCompleted",
+    "RelativePath": "api/Reservations/GetReservationByCompleted",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "GetReservationByOld",
+    "RelativePath": "api/Reservations/GetReservationByOld",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "GetReservationStats",
+    "RelativePath": "api/Reservations/GetReservationStats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "TotalReservationCount",
+    "RelativePath": "api/Reservations/TotalReservationCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ReservationsController",
+    "Method": "TotalReservationPeopleCount",
+    "RelativePath": "api/Reservations/TotalReservationPeopleCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ServicesController",
+    "Method": "ServiceList",
+    "RelativePath": "api/Services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ServicesController",
+    "Method": "CreateService",
+    "RelativePath": "api/Services",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createServiceDto",
+        "Type": "YumApp.WebAPI.Dtos.ServiceDtos.CreateServiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ServicesController",
+    "Method": "CreateService",
+    "RelativePath": "api/Services",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ServicesController",
+    "Method": "UpdateService",
+    "RelativePath": "api/Services",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateServiceDto",
+        "Type": "YumApp.WebAPI.Dtos.ServiceDtos.UpdateServiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.ServicesController",
+    "Method": "GetService",
+    "RelativePath": "api/Services/GetService",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.TestimonialsController",
+    "Method": "TestimonialList",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.TestimonialsController",
+    "Method": "CreateTestimonial",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createTestimonialDto",
+        "Type": "YumApp.WebAPI.Dtos.TestimonialDtos.CreateTestimonialDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.TestimonialsController",
+    "Method": "CreateTestimonial",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.TestimonialsController",
+    "Method": "UpdateTestimonial",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateTestimonialDto",
+        "Type": "YumApp.WebAPI.Dtos.TestimonialDtos.UpdateTestimonialDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YumApp.WebAPI.Controllers.TestimonialsController",
+    "Method": "GetTestimonial",
+    "RelativePath": "api/Testimonials/GetTestimonial",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

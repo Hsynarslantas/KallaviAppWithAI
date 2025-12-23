@@ -1,0 +1,41 @@
+﻿<div class="card w-100 h-100">
+    <div class="card-header">
+        <h4>🌍 Dünya Sofralarından Günlük İlginç Bilgiler</h4>
+        <div class="card-header-action">
+            <div class="badge badge-pill badge-danger">Kültür & Yemek</div>
+        </div>
+    </div>
+
+    <!-- ✅ card-body flex -->
+    <div class="card-body d-flex flex-column">
+
+        <div class="support-ticket media pb-1 mb-0 flex-grow-1">
+
+            <!-- 🌍 Emoji kutusu aynı hizada -->
+            <div class="user-img mr-2 d-flex align-items-center justify-content-center"
+                 style="font-size:32px; width:48px; height:48px;">
+                🌍
+            </div>
+
+            <div class="media-body ml-3">
+
+                <div class="badge badge-pill badge-primary mb-1 float-right">
+                    Günlük Bilgi
+                </div>
+
+                <div class="font-weight-bold">
+                    🧠 Dünyanın dört bir yanından mutfak kültürlerine dair ilginç bilgiler
+                </div>
+                <div class="text-muted mb-2">Her gün sizin için derleniyor.</div>
+
+                <!-- ✅ Metin yüksekliği büyüyünce kartı uzatır (eşitleme dış wrapper’da) -->
+                <div class="font-weight-600"
+                     style="white-space: pre-line; line-height:1.7;">
+                    @(ViewBag.MenuText ?? "Bugün için kültürel mutfak bilgisi hazırlanıyor…")
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

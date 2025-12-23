@@ -1,0 +1,25 @@
+﻿@model List<ResultNotificationDto>
+<div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+    <div class="dropdown-header">
+        Bildirimler
+        <div class="float-right">
+            <a href="#">Tüm Bildirimler</a>
+        </div>
+    </div>
+    <div class="dropdown-list-content dropdown-list-icons">
+        @foreach(var item in Model)
+        {
+        <a href="#" class="dropdown-item dropdown-item-unread">
+            <span class="dropdown-item-icon bg-primary text-white">
+                <i class="@item.IconUrl"></i>
+            </span> <span class="dropdown-item-desc">
+               @item.Description
+                <span class="time">@item.NotificationDate.ToShortDateString()</span>
+            </span>
+        </a>
+        }
+    </div>
+    <div class="dropdown-footer text-center">
+        <a href="#">Okundu Olarak İşaretle<i class="fas fa-chevron-right"></i></a>
+    </div>
+</div>

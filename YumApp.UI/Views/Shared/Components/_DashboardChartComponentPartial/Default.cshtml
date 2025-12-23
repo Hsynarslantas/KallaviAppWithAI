@@ -1,0 +1,88 @@
+﻿@using Newtonsoft.Json
+@model List<RezervationChartDto>
+
+<div class="row">
+    <div class="col-12 col-sm-12 col-lg-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Rezervasyon Durum Grafiği</h4>
+                <div class="card-header-action">
+                    <a href="/Reservation/ReservationList/" class="btn btn-primary">Tümünü Gör</a>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <!-- SOL TARAF (Chart) -->
+                    <div class="col-lg-9">
+                        <canvas id="reservationChart" style="height:280px;"></canvas>
+                    </div>
+
+                    <!-- SAĞ TARAF – küçük istatistik alanı -->
+                    <div class="col-lg-3">
+                        <div class="row mt-4">
+                            <div class="col-7 col-xl-7 mb-3">Onaylanan</div>
+                            <div class="col-5 col-xl-5 mb-3">
+                                <span class="text-big">@Model.Sum(x => x.CompletedRezervation)</span>
+                            </div>
+
+                            <div class="col-7 col-xl-7 mb-3">Geçmiş</div>
+                            <div class="col-5 col-xl-5 mb-3">
+                                <span class="text-big">@Model.Sum(x => x.OldRezervation)</span>
+                            </div>
+
+                            <div class="col-7 col-xl-7 mb-3">Toplam</div>
+                            <div class="col-5 col-xl-5 mb-3">
+                                <span class="text-big">
+                                    @(Model.Sum(x => x.OldRezervation) + Model.Sum(x => x.CompletedRezervation))
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- card-body -->
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const labels = @Html.Raw(JsonConvert.SerializeObject(Model.Select(x => x.Month).ToList()));
+    const approved = @Html.Raw(JsonConvert.SerializeObject(Model.Select(x => x.CompletedRezervation).ToList()));
+    const pending = @Html.Raw(JsonConvert.SerializeObject(Model.Select(x => x.OldRezervation).ToList()));
+
+    new Chart(document.getElementById('reservationChart'), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Onaylandı',
+                    data: approved,
+                    borderColor: '#28a745',
+                    backgroundColor: 'rgba(40,167,69,0.1)',
+                    fill: true,
+                    tension: 0.4
+                },
+                {
+                    label: 'Geçmiş Rezervasyon',
+                    data: pending,
+                    borderColor: '#ffc107',
+                    backgroundColor: 'rgba(255,193,7,0.1)',
+                    fill: true,
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // FULL GENİŞLİK
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

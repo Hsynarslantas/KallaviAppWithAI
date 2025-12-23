@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="section">
+	<div class="section-body">
+        <section class="section">
+            <div class="row ">
+                @await Component.InvokeAsync("_DashboardWidgetComponentPartial")
+            </div>
+            <div class="row">
+                @await Component.InvokeAsync("_DashboardChartComponentPartial")
+            </div>
+            @await Component.InvokeAsync("_DashboardEmployeeTaskComponentPartial")
+            <div class="row">
+                <div class="col-md-6 col-lg-12 col-xl-6">
+                    <!-- Support tickets -->
+                    @await Component.InvokeAsync("_DashboardAdviceMenuComponentPartial")
+                    <!-- Support tickets -->
+                </div>
+                <div class="col-md-6 col-lg-12 col-xl-6">
+                    @await Component.InvokeAsync("_DashboardSultanMenuComponentPartial")
+                </div>
+            </div>
+        </section>
+	</div>
+</section>
+<script src="~/otika/assets/js/app.min.js"></script>
+
+<script src="~/otika/assets/bundles/apexcharts/apexcharts.min.js"></script>
+
+<script src="~/otika/assets/js/page/index.js"></script>
+
+<script src="~/otika/assets/js/scripts.js"></script>
+
+<script src="~/otika/assets/js/custom.js"></script>

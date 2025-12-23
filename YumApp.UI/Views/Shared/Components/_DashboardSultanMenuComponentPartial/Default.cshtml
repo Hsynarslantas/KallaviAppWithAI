@@ -1,0 +1,53 @@
+﻿<div class="card w-100 h-100">
+    <div class="card-header">
+        <h4>📜 Osmanlı Takvimine Göre Bugün</h4>
+        <div class="card-header-action">
+            <div class="badge badge-pill badge-warning">🧠 Yapay Zeka Destekli</div>
+        </div>
+    </div>
+    <div class="card-body d-flex flex-column">
+
+        <div class="p-4 rounded flex-grow-1"
+             style="background:#fbf3dc; border:1px solid #e6d3a3;">
+
+            <div class="text-center mb-3">
+                <div class="font-weight-bold" style="font-size:18px; letter-spacing:0.5px;">
+                    Padişahımızın Bugünkü Menüsü
+                </div>
+                <div class="text-muted" style="font-size:13px;">
+                    (Saray Mutfağı – Matbah-ı Âmire)
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge badge-light" style="border:1px solid #e6d3a3;">
+                    📅 @DateTime.Today.AddYears(-200).ToString("dd.MM.yyyy")
+                </span>
+                <span class="text-muted small">
+                    Başaşçı Mührü: <span class="font-weight-bold">⚘</span>
+                </span>
+            </div>
+
+            <div style="white-space: pre-line; line-height:1.9; font-weight:600;">
+                @(ViewBag.MenuText ?? "Ferman hazırlanıyor…")
+            </div>
+
+            <div class="mt-4 d-flex justify-content-between align-items-center">
+                <div class="text-muted small">
+                    “𝒮𝒶𝓇𝒶𝓎 𝒶𝒹𝒶𝒷𝒾 𝓊̈𝓏ℯ𝓇ℯ…”
+                </div>
+                <div class="text-right">
+                    <span class="badge badge-warning" style="border:1px solid #e6d3a3;">
+                        ☪ 𝒮𝒶𝓇𝒶𝓎 ℱℯ𝓇𝓂𝒶𝓃𝒾
+                    </span>
+                </div>
+                <div class="mt-4 text-center font-italic"
+                     style="color:#7a6a3a; font-size:14px;">
+                    “Sende bugün padişah sofrasına buyur, bu menüyü tecrübe eyle.”
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

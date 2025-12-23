@@ -1,0 +1,35 @@
+﻿@model GetByIdMessageDto
+@{
+	ViewData["Title"] = "AnswerWithAI";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Yapay Zeka Destekli Mesaj Yanıtlama</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="AnswerWithAI" asp-route-id="@Model.MessageId">
+
+                            <label>Müşteri Mesajı</label>
+                            <textarea class="form-control" readonly style="height:150px; background:#f5f5f5;">@Model.MessageDetails</textarea>
+                            <br />
+
+                            <label>AI Cevap Önerisi (İsterseniz Düzenleyebilirsiniz)</label>
+                            <textarea class="form-control" name="aiAnswer" style="height:200px;">@ViewBag.AIAnswer</textarea>
+                            <br />
+
+                            <button type="submit" class="btn btn-primary">Onayla ve Gönder</button>
+                            <a href="/Admin/Message/Index" class="btn btn-secondary">İptal</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

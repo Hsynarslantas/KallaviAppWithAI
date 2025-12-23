@@ -1,0 +1,64 @@
+﻿@model List<ResultServiceDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+<section class="section">
+	<div class="section-body">
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4>Hizmetler Listesi</h4>
+						<small class="text-danger">
+							Hizmetler kısmına 3 hizmetten fazla hizmet girmeyiniz.
+							Aksi takdirde tasarım bozulacaktır.
+							Lütfen sayfa bütünlüğü için bu bilgiyi dikkate alınız!
+						</small>
+					</div>
+					<div class="card-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Başlık</th>
+									<th scope="col">Hizmetimiz</th>
+									<th scope="col">İkon</th>
+									<th scope="col">Sil</th>
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							@foreach (var item in Model)
+							{
+								count++;
+								<tbody>
+									<tr>
+										<td>@count</td>
+										<td>@item.Title</td>
+										<td>@item.Description</td>
+										<td>
+											<i class="@item.IconUrl"/>
+										</td>
+										<td><a href="/AdminService/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+										<td><a href="/AdminService/UpdateService/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+									</tr>
+								</tbody>
+							}
+						</table>
+						@if (Model.Count == 3)
+						{
+							<a href="#" class="btn btn-info" onclick="return false;">Hizmetler Alanı Dolu</a>
+						}
+						else
+						{
+							<a href="/AdminService/CreateService/" class="btn btn-info">Ekle</a>
+						}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

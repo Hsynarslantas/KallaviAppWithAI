@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "hpZrbXikAdYz/OMHsdcavqS0fFfmOiJA1CZYd3xKGmU=",
+  "Source": "YumApp.WebAPI",
+  "BasePath": "_content/YumApp.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

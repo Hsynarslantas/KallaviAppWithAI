@@ -1,0 +1,61 @@
+﻿@model List<ResultContactDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+
+<section class="section">
+	<div class="section-body">
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4>İletişim Bilgileri Listesi</h4>
+						<span style="color:red">Sadece 1 Adet İletişim Bilgisi Alanı Girişi Yapınız.Aksi Takdirde Tasarım Bozulacağını için Sistem yeni girişi kabul etmemektedir !</span>
+					</div>
+					<div class="card-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Mail</th>
+									<th scope="col">Telefon Numarası</th>
+									<th scope="col">Adres</th>
+									<th scope="col">Açılış / Kapanış Saatleri</th>
+									<th scope="col">Sil</th>
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							@foreach (var item in Model)
+							{
+								count++;
+								<tbody>
+									<tr>
+										<td>@count</td>
+										<td>@item.Mail</td>
+										<td>@item.PhoneNumber</td>
+										<td>@item.Address</td>
+										<td>@item.OpenHours</td>
+										<td><a href="/AdminContact/DeleteContact/@item.ContactId" class="btn btn-danger">Sil</a></td>
+										<td><a href="/AdminContact/UpdateContact/@item.ContactId" class="btn btn-success">Güncelle</a></td>
+									</tr>
+								</tbody>
+							}
+						</table>
+						@if (Model.Count == 1)
+						{
+							<a href="#" class="btn btn-info" onclick="return false;">İletişim Alanı Dolu</a>
+						}
+						else
+						{
+							<a href="/AdminContact/CreateContact/" class="btn btn-info">Ekle</a>
+						}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

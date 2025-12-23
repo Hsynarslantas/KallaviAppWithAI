@@ -1,0 +1,53 @@
+﻿@model List<ResultEventDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Yapay Zeka Destekli Tarif / Tavsiye Robotu</h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form method="post" action="/AI/CreateFoodRecipe">
+                            <div class="form-group mb-3">
+                                <label>Şefim, bugün ne hazırlamak istiyorsun?</label>
+                                <textarea name="prompt"
+                                          rows="4"
+                                          class="form-control"
+                                          placeholder="Örneğin: Elimde süt, şeker ve vanilin var. Ne tatlı yapabilirim?"></textarea>
+                            </div>
+
+                            <button class="btn btn-primary">Tarif Üret</button>
+                        </form>
+
+                        @if (ViewBag.Answer != null)
+                        {
+                            <hr />
+
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h4>Şefin Cevabı</h4>
+                                </div>
+                                <div class="card-body">
+                                    @Html.Raw(ViewBag.Answer.Replace("\n", "<br>"))
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

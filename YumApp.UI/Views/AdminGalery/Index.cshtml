@@ -1,0 +1,44 @@
+﻿@model List<ResultImageDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="section">
+    <div class="section-header">
+        <h1>Galeri</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="/Default/Index">Restaurant</a></div>
+            <div class="breadcrumb-item">Galeri</div>
+        </div>
+    </div>
+
+    <div class="section-body">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <article class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <a href="#" class="main-link">
+                                <img src="@item.ImageUrl"
+                                     class="img-fluid w-100 rounded"
+                                     alt="@item.Title" style="width:505px;height:320px;">
+                                <span class="project-title">@item.Title</span>
+                                <span class="overlay-mask"></span>
+                            </a>
+
+                            <a class="enlarge cboxElement" href="#">
+                                <i class="fa fa-expand fa-fw"></i>
+                            </a>
+
+                            <a class="link" href="#">
+                                <i class="fa fa-eye fa-fw"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            }
+        </div>
+    </div>
+</section>

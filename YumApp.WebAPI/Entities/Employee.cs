@@ -1,0 +1,14 @@
+﻿namespace YumApp.WebAPI.Entities
+{
+    public class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string TaskName { get; set; }
+        public byte TaskStatusValue { get; set; }
+        public DateTime AssignDate { get; set; }
+        public DateTime DueDate { get; set; }
+        public string Priority { get; set; }
+        public string TaskStatus { get; set; }
+        public List<EmployeeTask> EmployeeTasks { get; set; }
+    }
+}

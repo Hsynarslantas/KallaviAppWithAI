@@ -1,0 +1,134 @@
+﻿@model List<ResultProductDto>
+<div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+    <div class="tab-pane fade active show" id="menu-starters">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Lezzetlerimiz</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach(var item in Model)
+            {
+                <div class="col-lg-4 menu-item">
+                    <a href="/Default/Index" class="glightbox"><img src="@item.ProductImageUrl" style="width:100%; height:250px; object-fit:cover; border-radius:12px;" class="menu-img img-fluid" alt=""></a>
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">
+                        @item.ProductDescription
+                    </p>
+                    <p class="price">
+                        @item.ProductPrice 
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="menu-1">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Başlangıçlar</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach (var item in Model.Where(x => x.CategoryId == 1))
+            {
+                <div class="col-lg-4 menu-item">
+                    <img src="@item.ProductImageUrl"
+                         style="width:100%; height:250px; object-fit:cover; border-radius:12px;" />
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">@item.ProductDescription</p>
+                    <p class="price">@item.ProductPrice</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="menu-2">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Kahvaltı</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach (var item in Model.Where(x => x.CategoryId == 2))
+            {
+                <div class="col-lg-4 menu-item">
+                    <img src="@item.ProductImageUrl"
+                         style="width:100%; height:250px; object-fit:cover; border-radius:12px;" />
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">@item.ProductDescription</p>
+                    <p class="price">@item.ProductPrice</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="menu-3">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Yemekler</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach (var item in Model.Where(x => x.CategoryId == 3))
+            {
+                <div class="col-lg-4 menu-item">
+                    <img src="@item.ProductImageUrl"
+                         style="width:100%; height:250px; object-fit:cover; border-radius:12px;" />
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">@item.ProductDescription</p>
+                    <p class="price">@item.ProductPrice</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="menu-4">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Ana Yemekler</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach (var item in Model.Where(x => x.CategoryId == 4))
+            {
+                <div class="col-lg-4 menu-item">
+                    <img src="@item.ProductImageUrl"
+                         style="width:100%; height:250px; object-fit:cover; border-radius:12px;" />
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">@item.ProductDescription</p>
+                    <p class="price">@item.ProductPrice</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="menu-5">
+
+        <div class="tab-header text-center">
+            <p>Menü</p>
+            <h3>Tatlılar</h3>
+        </div>
+
+        <div class="row gy-5">
+            @foreach (var item in Model.Where(x => x.CategoryId == 5))
+            {
+                <div class="col-lg-4 menu-item">
+                    <img src="@item.ProductImageUrl"
+                         style="width:100%; height:250px; object-fit:cover; border-radius:12px;" />
+                    <h4>@item.ProductName</h4>
+                    <p class="ingredients">@item.ProductDescription</p>
+                    <p class="price">@item.ProductPrice</p>
+                </div>
+            }
+        </div>
+    </div>
+
+
+</div>

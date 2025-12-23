@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\YumApp.UI.props" />
+</Project>
